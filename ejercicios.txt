@@ -1,0 +1,50 @@
+"""
+    Modelar: un contador
+        atributos: 
+            - un valor, inicializa en 0
+        
+        puede:
+            - ver el valor
+            - incrementar su contador en 1
+            - decrementar su contador en 1
+"""
+
+
+"""
+    Modelar:   una valla
+
+        atributos: 
+            - estado
+
+        puede:
+            - recuperar su estado
+            - cambiar su estado
+"""
+
+"""
+    Modelar:   un auto 
+
+        atributos: 
+            - una velocidad, al iniciar esta parado
+
+        puede:
+            - puede ver su velocidad
+            - puede acelerar una determinada velocidad
+            - puede frenar 
+"""
+
+"""
+    Modelar una fecha
+
+        atributos: 
+            - dia
+            - mes
+            - anio
+
+        puede:
+            - ver el dia 
+            - ver el mes
+            - ver el anio
+            - saber si es igual a otra fecha
+            - saber si es menor a otra fecha
+"""

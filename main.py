@@ -1,10 +1,15 @@
-from modelos import auto
+import modelos.fechaModulo as fecha
+
+fecha1 = fecha
+
+date = fecha
+
 
 if __name__ == '__main__':
-    print(auto.desplazamientoDelAuto())
+    fecha1.setearFecha([19,10,2021])
+    date.setearFecha([20,10,2021])
+    
+    fecha1.verFecha()
+    date.verFecha()
 
-    auto.desplazar(50)
-    print(auto.desplazamientoDelAuto())
-
-    auto.resetearDesplazamiento()
-    print(auto.desplazamientoDelAuto())
+ 
