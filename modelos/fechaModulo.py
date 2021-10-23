@@ -44,24 +44,23 @@ def setearFecha(unaFecha: list) -> None:
 
 def esIgual(dia: int, mes: int, anio: int) -> bool:
     """Comparar si la fecha ingresada es igual a la fecha almacenada  """
-    return (
-        verAnio() == anio 
-        and 
-        verMes() == mes 
-        and 
-        verDia() == dia
-    )
+    return verAnio() == anio  and  verMes() == mes  and  verDia() == dia
+    
 
 def esMenor(dia: int, mes: int, anio: int) -> bool:
     """Comparar si la fecha ingresada es menor a la fecha almacenada  """
     return (
         verAnio() < anio 
+        
         or 
+        
         (
             verAnio == anio and
             verMes() < mes
         ) 
+        
         or
+        
         (
             verAnio() == anio and
             verMes() == mes and
@@ -69,35 +68,41 @@ def esMenor(dia: int, mes: int, anio: int) -> bool:
         )        
     )
     
-def esMenorOIgual(dia: int, mes: int, anio: int) -> bool:
-    """ Responde si es menor o igual a otra fecha """
-    return esMenor(dia, mes, anio) or esIgual(dia, mes, anio)
+# def esMenorOIgual(dia: int, mes: int, anio: int) -> bool:
+#     """ Responde si es menor o igual a otra fecha """
+#     return esMenor(dia, mes, anio) or esIgual(dia, mes, anio)
     
-def esMayor(dia: int, mes: int, anio: int) -> bool:
-    """ Responde si es mayor a otra fecha """
-    return not esMenorOIgual(dia, mes, anio)
+# def esMayor(dia: int, mes: int, anio: int) -> bool:
+#     """ Responde si es mayor a otra fecha """
+#     return not esMenorOIgual(dia, mes, anio)
 
 
-def esMayorOIgual(dia: int, mes: int, anio: int) -> bool:
-    """ Responde si es mayor o igual """
-    return not esMenor(dia, mes, anio)
+# def esMayorOIgual(dia: int, mes: int, anio: int) -> bool:
+#     """ Responde si es mayor o igual """
+#     return not esMenor(dia, mes, anio)
 
-def entreDosFechas(fecha_inicial: list[int], fecha_final: list[int]) -> bool:
-    """ Responde si se encuentra entre dos fechas pasadas como parametro """
-    return (
-        esMayorOIgual(fecha_inicial[0], fecha_inicial[1], fecha_inicial[2])
-        and 
-        esMenorOIgual(fecha_final[0], fecha_final[1], fecha_final[2])
-    )
+# def entreDosFechas(fecha_inicial: list[int], fecha_final: list[int]) -> bool:
+#     """ Responde si se encuentra entre dos fechas pasadas como parametro """
+#     return (
+#         esMayorOIgual(fecha_inicial[0], fecha_inicial[1], fecha_inicial[2])
+#         and 
+#         esMenorOIgual(fecha_final[0], fecha_final[1], fecha_final[2])
+#     )
     
     
 if __name__ == '__main__':
-    setearFecha([1, 2, 2003])
+    verFecha()
     
-    fecha_start = [1,1,2002]
-    fecha_end = [1,1,2004]
+    setearFecha( [1, 2, 2003] )
     
-    print(entreDosFechas(fecha_start, fecha_end))
+    verFecha()
+    
+    print(esIgual(2,2,2003))
+    
+    # fecha_start = [1,1,2002]
+    # fecha_end = [1,1,2004]
+    
+    # print(entreDosFechas(fecha_start, fecha_end))
     
 
     

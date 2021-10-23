@@ -10,7 +10,7 @@
             - puede frenar 
 """
 
-velocidadAuto = [0]
+velocidadAuto = [10]
 
 def verVelocidad() -> int:
     """Devuelve la velocidad del auto"""
